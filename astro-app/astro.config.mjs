@@ -19,10 +19,10 @@ export default defineConfig({
 						{ label: '4. Additional Storage Services', slug: 'aws/additionalstorageservices' },
 						{ label: '5. Amazon VPC Applications', slug: 'aws/vpcapplications' },
 						{ label: '6. Amazon VPC Peering', slug: 'aws/vpcpeering' },
-						// { label: '7. Amazon VPC Security', slug: 'aws/amazonvpcsecurity' },
-						// { label: '8. Compute Services Design', slug: 'aws/cloudcomputing' },
-						// { label: '9. Compute Services Implementation', slug: 'aws/cloudcomputing' },
-						// { label: '10. Compute Services Management', slug: 'aws/cloudcomputing' },
+						{ label: '7. Amazon VPC Security', slug: 'aws/vpcsecurity' },
+						{ label: '8. Compute Services Design', slug: 'aws/computeservicesdesign' },
+						{ label: '9. Compute Services Implementation', slug: 'aws/computeservicesimplementation' },
+						{ label: '10. Compute Services Management', slug: 'aws/computeservicesmanagement' },
 						// { label: '11. Identity and Access Management (IAM)', slug: 'aws/cloudcomputing' },
 						// { label: '12. Identity and Access Management (IAM) Best Practices', slug: 'aws/cloudcomputing' },
 						// { label: '13. Auto Scaling Solutions', slug: 'aws/cloudcomputing' },
@@ -38,13 +38,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'HashiCorp Certified: Terraform Associate',
-					items: [
-						{ label: '1. Cloud Computing Overview', slug: 'aws/cloudcomputing' },
-					],
-				},
-				{
-					label: 'Frameworks',
+					label: 'Spring',
 					items: [
 						{ label: '1. React.js', slug: 'aws/cloudcomputing' },
 						{ label: '2. Node.js', slug: 'aws/cloudcomputing' },
@@ -52,7 +46,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Languages',
+					label: 'Node.js',
 					items: [
 						{ label: '1. JavaScript', slug: 'aws/cloudcomputing' },
 						{ label: '2. TypeScript', slug: 'aws/cloudcomputing' },
@@ -62,12 +56,25 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'React.js',
+					items: [
+						{ label: '1. Terraform', slug: 'aws/cloudcomputing' },
+						{ label: '2. Docker', slug: 'aws/cloudcomputing' },
+					],
+				},
+				{
+					label: 'Artificial Intelligence / Machine Learning',
+					items: [
+						{ label: '1. Retrieval Augmented Generation (RAG)', slug: 'aws/cloudcomputing' },
+						{ label: '2. Model Context Protocol (MCP)', slug: 'aws/cloudcomputing' },
+					],
+				},
+				{
 					label: 'DevOps Tools',
 					items: [
 						{ label: '1. GitHub Actions', slug: 'aws/cloudcomputing' },
 						{ label: '2. Jenkins', slug: 'aws/cloudcomputing' },
 						{ label: '3. Azure DevOps', slug: 'aws/cloudcomputing' },
-						{ label: '4. Docker', slug: 'aws/cloudcomputing' },
 					],
 				},
 				{
