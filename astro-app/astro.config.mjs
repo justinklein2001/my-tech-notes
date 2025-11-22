@@ -23,7 +23,7 @@ export default defineConfig({
 						{ label: '8. Compute Services Design', slug: 'aws/computeservicesdesign' },
 						{ label: '9. Compute Services Implementation', slug: 'aws/computeservicesimplementation' },
 						{ label: '10. Compute Services Management', slug: 'aws/computeservicesmanagement' },
-						// { label: '11. Identity and Access Management (IAM)', slug: 'aws/cloudcomputing' },
+						{ label: '11. Identity and Access Management (IAM)', slug: 'aws/iam' },
 						// { label: '12. Identity and Access Management (IAM) Best Practices', slug: 'aws/cloudcomputing' },
 						// { label: '13. Auto Scaling Solutions', slug: 'aws/cloudcomputing' },
 						// { label: '14. Virtual Network Services', slug: 'aws/cloudcomputing' },
