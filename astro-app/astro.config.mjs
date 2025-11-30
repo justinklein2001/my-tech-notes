@@ -30,7 +30,7 @@ export default defineConfig({
 						{ label: '15. Virtual Network Services', slug: 'aws/virtualnetworkservices' },
 						{ label: '16. Designing Cost-Optimized Compute', slug: 'aws/designingcostoptimizedcompute' },
 						{ label: '17. Designing for Operational Excellence', slug: 'aws/designingoperationalexcellence' },
-						// { label: '18. Designing for Elasticity and Scalability', slug: 'aws/cloudcomputing' },
+						{ label: '18. Designing for Elasticity and Scalability', slug: 'aws/designingscalability' },
 						// { label: '19. AWS Database Design', slug: 'aws/cloudcomputing' },
 						// { label: '20. AWS Database Deployment', slug: 'aws/cloudcomputing' },
 						// { label: '22. Amazon Services', slug: 'aws/cloudcomputing' },
