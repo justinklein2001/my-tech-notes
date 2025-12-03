@@ -103,4 +103,53 @@ You can use a single AZ deployment (one instance, one AZ, one region) OR multipl
 
 ### DynamoDB
 - NoSQL database service.
-- 
+- Provides special features.
+  - Millisecond latency at any scale.
+  - Very fast read and writes.
+- Stored on SSD.
+- Spread across 3 distinct data centers.
+
+**Read Consistency Types**:
+1. Eventual Consistent Reads (Second delays)
+2. Strong Consistent Reads (Millisecond delays)
+
+**Pricing**:
+- Storage: $0.25/GB/month
+- Throughput:
+  - Write: Billed per hour for every 10 units.
+  - Read: Billed per hour for every 50 units.
+  - 1 unit = 1 write/second.
+
+### Data Security Policies:
+
+**Compliance vs. Policies**:
+
+**Compliance** is **External (what)**:
+- Government regulations.
+- Industry requirements.
+- Partner agreements.
+
+**Policy** is **Internal (how)**:
+- Data creation, management & destruction.
+
+**Cardinal Rules of Privacy**:
+- Do what is required.
+- Do what you promise.
+- Report quickly and accurately.
+
+**Concerns**:
+- Data is stored on someone else's network.
+- Data is accessed through the Internet.
+- Large volumes of data are concentrated.
+- Without careful control, unknown data can be stored.
+- A single breach = greater loss.
+
+**Less Obvious Concerns**:
+- Improperly configured services.
+- Unused services remaining active.
+- Remote access is how it's accessed. 
+
+**So...**
+- Address everything with policies.
+- Ensure proper education for admins and users.
+- Monitor for compliance.

@@ -32,9 +32,9 @@ export default defineConfig({
 						{ label: '17. Designing for Operational Excellence', slug: 'aws/designingoperationalexcellence' },
 						{ label: '18. Designing for Elasticity and Scalability', slug: 'aws/designingscalability' },
 						{ label: '19. AWS Database Design', slug: 'aws/databasedesign' },
-						// { label: '20. AWS Database Deployment', slug: 'aws/cloudcomputing' },
-						// { label: '22. Amazon Services', slug: 'aws/cloudcomputing' },
-						// { label: '22. Operational Excellence with AWS', slug: 'aws/cloudcomputing' },
+						{ label: '20. AWS Database Deployment', slug: 'aws/databasedeployment' },
+						{ label: '21. Amazon Services', slug: 'aws/services' },
+						{ label: '22. Operational Excellence with AWS', slug: 'aws/operationalexcellence' },
 						
 					],
 				},
