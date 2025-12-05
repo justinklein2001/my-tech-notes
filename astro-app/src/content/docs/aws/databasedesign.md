@@ -4,10 +4,10 @@ description: Overview of designing DBs in AWS.
 ---
 
 ## Database Types
-1. Hosted Services
+1. **Hosted Services**
     - Both relational and non-relational.
     - AWS Relational Database Service (RDS)
-2. Custom Instance
+2. **Custom Instance**
     - Start the instance with the required OS (AMI).
     - Install the database service (bring your own).
 
@@ -30,9 +30,9 @@ description: Overview of designing DBs in AWS.
 - Used for online analytical processing (OLAP) - RedShift.
 
 ### Database Hosting Methods
-1. EC2 Instance-Based
+1. **EC2 Instance-Based**
     - Launch an instance, install the db service, open appropriate ports in security group, connect to the DB.
-2. AWS Service-Based
+2. **AWS Service-Based**
     - Launch DB, connect to the database.
 
 ### High-Availability Solutions
@@ -48,15 +48,15 @@ You can use a single AZ deployment (one instance, one AZ, one region) OR multipl
 
 **Methods**:
 - **Scale the Instance**: Increase type/class of EC2 instance.
-- Note that auto-scaling is not supported in RDS
+- Note that **auto-scaling is not supported in RDS**.
     - But can be scripted via CLI.
-- Read-Replica: Read-only copy of DB, offloads read-only traffic from the main DB.
+- **Read-Replica**: Read-only copy of DB, offloads read-only traffic from the main DB.
 
 ### Database Security
 
 **Encryption**:
-- RDS databases support "at-rest" encryption.
-- Must be enabled at creation time, can be enabled manually on recovery.
+- RDS databases support **"at-rest" encryption**.
+- Must be **enabled** at **creation time**, can be enabled manually on recovery.
 
 **Permissions**:
 - Administration access based on IAM.
@@ -65,7 +65,7 @@ You can use a single AZ deployment (one instance, one AZ, one region) OR multipl
 
 ### Aurora
 - Relational DB.
-- Optimized for online Transaction Processing (OTP) (Very fast writes).
+- Optimized for online Transaction Processing (OTP) (**Very fast writes**).
 - MySQL-compatible DB, yet syntax is more efficient.
 
 **Scaling Aurora**:
@@ -79,7 +79,7 @@ You can use a single AZ deployment (one instance, one AZ, one region) OR multipl
 **MySQL Read Replicas**: Up to 5, no automatic failover.
 
 ### RedShift
-- Data warehouse database.
+- **Data warehouse database**.
 - Optimized for online analytical processing (OLAP).
 - AWS managed.
 - Pricing: entry: $0.25/hr or $1000 per TB/yr.
@@ -102,16 +102,16 @@ You can use a single AZ deployment (one instance, one AZ, one region) OR multipl
 - Snapshots can be restored to new AZs.
 
 ### DynamoDB
-- NoSQL database service.
+- **NoSQL** database service.
 - Provides special features.
-  - Millisecond latency at any scale.
+  - **Millisecond latency at any scale**.
   - Very fast read and writes.
 - Stored on SSD.
 - Spread across 3 distinct data centers.
 
 **Read Consistency Types**:
-1. Eventual Consistent Reads (Second delays)
-2. Strong Consistent Reads (Millisecond delays)
+1. **Eventual Consistent Reads** (Second delays)
+2. **Strong Consistent Reads** (Millisecond delays)
 
 **Pricing**:
 - Storage: $0.25/GB/month

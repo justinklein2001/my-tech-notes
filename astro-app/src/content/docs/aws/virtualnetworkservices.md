@@ -28,21 +28,21 @@ Together they are a **Fully Qualified Domain Name (FQDN)**.
 - Requests is configured with a DNS server address (8.8.8.8 if Google's public DNS IP)
 
 **DNS Records**:
-1. A & AAAA: IPv4 or IPv6.
-2. NS: Domain to Hostname.
-3. MX: Mail Record.
-4. CNAME: Real (canonical).
+1. **A & AAAA**: IPv4 or IPv6.
+2. **NS**: Domain to Hostname.
+3. **MX**: Mail Record.
+4. **CNAME**: Real (canonical).
 
 ### Route 53 (Custom Domains)
-- You can register custom non-paid domains privately within a VPC.
+- You can register **custom non-paid domains privately within a VPC**.
 
 **Routing Policies**:
-1. Classic: Simple DNS
-2. Weighted: Multiple IP addresses, assign weight for when to route to each app.
-3. Latency: Send to the IP with the lowest latency.
-4. Failover: if fail, use next IP.
-5. Geolocation: Closest IP.
-6. Multi-Value Answer: Health checks of IPs, route to healthiest.
+1. **Classic**: Simple DNS.
+2. **Weighted**: Multiple IP addresses, assign weight for when to route to each app.
+3. **Latency**: Send to the IP with the lowest latency.
+4. **Failover**: if fail, use next IP.
+5. **Geolocation**: Closest IP.
+6. **Multi-Value Answer**: Health checks of IPs, route to healthiest.
 
 ### ACL (Access Control List) & NACL
 - S3 buckets can use ACLs to determine who has access to buckets (should be a bucket policy instead).

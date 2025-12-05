@@ -12,6 +12,7 @@ export default defineConfig({
 				{
 					label: 'AWS Certified Solutions Architect - Associate',
 					items: [
+						{ label: 'Overview', slug: 'aws/overview' },
 						{ label: '1. Cloud Computing Overview', slug: 'aws/cloudcomputing' },
 						{ label: '2. AWS Cloud Services', slug: 'aws/cloudservices' },
 						{ label: '3. Amazon S3', slug: 'aws/amazons3' },

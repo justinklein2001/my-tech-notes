@@ -4,7 +4,7 @@ description: Overview of how to achieve operational excellence in AWS.
 ---
 
 ### Resilient Design
-- Provides reliability: Assurance that the system is there when you need it.
+- Provides **reliability**: Assurance that the system is there when you need it.
 - Automation of recovery, scaling, backups.
 - Implement data-recovery, auto-scaling and backups.
 - Test recovery and implement automatic recovery whenever possible.
@@ -20,13 +20,13 @@ description: Overview of how to achieve operational excellence in AWS.
 - Automate security best practices: CloudTrail, so actions are logged.
 
 ### 3 Phases of Operational Excellence
-1. Prepare
+1. **Prepare**
    - Understand workloads and expected behaviours.
    - Considerations:
      - Operational priorities,
      - Design for operations.
      - Operational readiness.
-2. Operate
+2. **Operate**
     - Monitor...
       - Environment health.
       - Discover business and technical insights.
@@ -35,7 +35,7 @@ description: Overview of how to achieve operational excellence in AWS.
       - Reliability.
       - Performance.
       - Cost.
-3. Evolve
+3. **Evolve**
     - Learn from experience.
     - Shared learning.
     - Improve & scale.

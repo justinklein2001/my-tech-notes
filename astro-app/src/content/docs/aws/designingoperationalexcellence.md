@@ -4,30 +4,30 @@ description: Overview of ways to leverage services in AWS.
 ---
 
 ### CloudFront
-- Content Delivery Network (CDN)
+- **Content Delivery Network (CDN)**
     - Distribute content to localized regions.
     - Reduces latency, provides high data transfer speeds.
 
 **3 Types of Items Usually Leveraged**:
-1. S3 - Cached locally near the user.
+1. **S3** - **Cached** locally near the user.
 2. MediaPackage Channel - AWS service for different media types.
-3. HTTP(s) Server
+3. HTTP(s) Server.
 
-**Content Access**: Public or Restricted.
+**Content Access**: **Public** or **Restricted**.
 
 **Content Restraint**: HTTPS required, Geo-Restrictions (ie Netflix).
 
 **CloudFront** uses regional edge caches and edge locations to provide localized content.
 
 ### Web Application Firewall (WAF)
-- Controls access to HTTP and HTTPS servers.
+- Controls **access** to HTTP and HTTPS servers.
     - Based on requests.
     - Based on source IPs.
 - Works with CloudFront or Private Elastic Load Balancer.
 
 **WAF Behaviours**:
-- Allow all requests.
-    - EXCEPT for the ones you specify.
+- **Allow all requests**.
+    - **EXCEPT for the ones you specify**.
 Monitoring:
 - Requests that match specified parameters.
 
@@ -36,12 +36,12 @@ Monitoring:
 - Configurable Default Behaviour: Allow or Deny.
 
 ### AWS Shield
-- Standard: Monitoring and DDoS support (Free)
+- **Standard**: **Monitoring** and **DDoS support** (Free)
 - Advanced: $3k USD/month.
 
 ### Simple Queue Service (SQS)
-- Used to decouple applications.
-    - Break applications into separate processing tasks.
+- Used to **decouple** applications.
+    - **Break** applications into **separate** **processing** **tasks**.
     - Allow many small processes to form a complete solution.
 
 **SQS Messages**:
@@ -61,14 +61,14 @@ Monitoring:
 - Auto-scales.
 
 **Queue Types**:
-1. Standard (Default)
+1. **Standard** (Default)
     - Doesn't guarantee sequential delivery of messages.
-2. First-In-First-Out:
+2. **First-In-First-Out**:
     - Guarantees sequential delivery of messages.
     - Supports fewer transactions per second.
 
 ### Simple Notification System (SNS)
-- Getting alerts in the cloud.
+- Getting **alerts** in the cloud.
 - Uses the pub-sub messaging model based on "topics".
 - Stored across multiple AZs.
 - Several Delivery Options:

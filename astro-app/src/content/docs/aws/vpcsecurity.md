@@ -3,7 +3,7 @@ title: Amazon VPC Security
 description: Deep-dive into VPC Security.
 ---
 
-**Security Groups**:
+### Security Groups
 - Equivalent to a **firewall**.
 - Assigned to an **instance** in a VPC.
 - Applied to **instances**, **NOT** **subnets**.
@@ -13,13 +13,13 @@ description: Deep-dive into VPC Security.
   - Supports only **allow**, **deny is implicit**.
   - It's **stateful** (persists)
 
-**Network Access Control Lists (NACLs)**
+### Network Access Control Lists (NACLs)
 - Applies to **subnets**.
 - **Stateless** processing.
 - Supports both **allow** and **deny** rules.
 - Rule number defines **precedence** (lower first, first match applies).
 
-**Network Address Translation (NAT)**
+### Network Address Translation (NAT)
 - Translates a single **external** address to **multiple internal** addresses.
   - In most cases, the external address is a true external Internet address.
   - External address may be another internal network address in less common implementations.
