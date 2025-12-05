@@ -1,46 +1,22 @@
 ---
-title: Justin Klein
+title: Get Smart!
 description: Technical notes on all things software development, cloud computing, and security.
-# template: splash # Remove or comment out this line to display the site sidebar on this page.
 hero:
-  tagline: Being a Full-Stack Developer requires a wide technical knowledge base. Here's mine.
+  tagline: An ever-growing collection of technical notes on software development, cloud computing, and security. Authored by Justin Klein.
   image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+    file: ../../../public/favicon.svg
+
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card } from '@astrojs/starlight/components';
 
-## What makes this site cool?
-
-<CardGrid stagger>
-	<p>
-	Anyone can write a bunch of notes on tech. But this site links all docs to real-world, production grade code on GitHub.
-	</p>
-	<p> All these notes were first hand-written before being added here. These concepts
-	are presented as how I understand and apply them in real-world scenarios. It also acts as the source of a vector database
-	for a RAG LLM study agent you can check out <a>here</a>.</p>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+### What is this site?
+<Card title="It's technical notes in my own words." variant="info" class="mb-6">
+  A novel concept, right? The goal is to have a site I can refer back to when I need a refresher on a topic.
+</Card>
+<Card title="It's a step on the path towards mastery." variant="info" class="mb-6">
+  I learn best when I watch an expert explain a topic, translate it into my own words, and then build something leveraging that knowledge. This site is the second step in that process.
+</Card>
+<Card title="It's the knowledge base for a RAG study agent." variant="info" class="mb-6">
+   Sometimes I forget things. By having my notes in a structured format, I can build a Retrieval-Augmented Generation (RAG) study agent that can help me review and retain information more effectively.
+</Card>
