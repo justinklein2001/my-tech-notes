@@ -4,17 +4,17 @@ description: Overview of ways to optimize costs in AWS.
 ---
 
 ### AWS Amplify
-- Front-end and back-end full-stack development.
-  - Authentication
-  - Storage
-  - APIs
+- Front-end and back-end **full-stack** development.
+  - **Authentication**
+  - **Storage**
+  - **APIs**
   - Supports Angular, Vue, React, Node
   - A few clicks configures all requires AWS services to provide the full-stack.
-  - Includes visual UI design
+  - Includes visual UI design.
   - Figma designs can be imported and automatically converted to code.
 
 ### AppSync
-- Provides a GraphQL-based solution for data integration.
+- Provides a **GraphQL-based solution** for data integration.
 - Data sources include DynamoDB, Lambda and HTTP APIs.
 - Effectively acts as a GraphQL proxy allowing for access to other data sources that may not be cloud native.
 
@@ -24,7 +24,7 @@ description: Overview of ways to optimize costs in AWS.
   - Manual testing through remote access and control.
 
 ### Lambda
-- Compute service that runs code without servers.
+- Compute service that **runs code without servers**.
 - Runs code only when needed.
 - Scales automatically (up to thousands of requests per second.)
 - Billed by compute time.
@@ -34,13 +34,13 @@ description: Overview of ways to optimize costs in AWS.
   -Supports Node.js, Java, C#, Go, Python
 
 **Lambda Use Process**:
-1. Customer builds teh code.
+1. Customer builds the code.
 2. Customer launches the code as a Lambda function.
 3. AWS selects server.
 4. Customer calls Lambda function as needed from applications.
 
 ### API Gateway (Serverless Architecture)
-- API management in the cloud.
+- **API management** in the cloud.
 - Can interact with many targets (AWS services, other web services).
 
 **Serverless Architecture**: Moves data in and out of the cloud without instances.
@@ -50,7 +50,7 @@ description: Overview of ways to optimize costs in AWS.
 
 **Cross Origin Resource Sharing (CORS)**:
 - Can be enabled for the API Gateway.
-  - Allows receipt of requests from other domains.
+  - **Allows receipt of requests from other domains**.
     - Default is internal domain requests only (ie your backend only)
   - Without it, errors will occur (denials).
 
@@ -83,4 +83,4 @@ SDK video device -> Kinesis Firehose -> Output (Video)
 Input (Kinesis data firehose) -> Kinesis Data Analytics (SQL queries against streams) -> Output (S3)
 
 ### Reference Architectures
-- AWS provides well-architected frameworks.
+- AWS provides **well-architected** frameworks.

@@ -16,18 +16,18 @@ Rotate the Access Key & Secret Access Key.
 Use **boundaries** to properly monitor this use case.
 
 ### AWS Compliance Program
-- AWS Compliance Center contains information on how to achieve regulatory compliance in the cloud.
-- Includes HIPAA, PCI-DSS, ISO & government compliance.
+- **AWS Compliance Center** contains information on how to achieve regulatory compliance in the cloud.
+- Includes **HIPAA**, **PCI-DSS**, **ISO** & government compliance.
 - Each program has its own quick start guide.
 
 ### AWS Security Group
-- Paid subscription.
-- Runs automatic checks to scan for compliance with regulations & laws.
-- Amazon GuardDuty is an intrusion detection system, Amazon inspector performs vulnerability analysis, Amazon macie provides S3 bucked policy compliance scams.
+- **Paid** subscription.
+- Runs **automatic checks** to scan for compliance with regulations & laws.
+- **Amazon GuardDuty** is an **intrusion detection system**, **Amazon Inspector** performs **vulnerability analysis**, **Amazon Macie** provides **S3 bucked policy compliance** scams.
 
 ### Shared Responsibility Model
-- AWS provides security of the cloud.
-- You are responsible for security in the cloud.
+- AWS provides security **of** the cloud.
+- You are responsible **for security in the cloud**.
 
 ### Data Security Control
 - You own and control the data, AWS doesn't access it without your agreement.
@@ -35,7 +35,7 @@ Use **boundaries** to properly monitor this use case.
 - Includes data ingestion, transformation, classification, retention and removal.
 
 ### What to Encrypt
-- PII (Personably Identifiable Information)
+- **PII** (Personably Identifiable Information)
 - Competitive advantages
 - Customer Information
 
@@ -50,9 +50,9 @@ Use **boundaries** to properly monitor this use case.
 **Federated Identity**: A system of trust between two parties.
 - One party trusts the other to authenticate users.
 - AWS supports standardized protocols:
-  - Security Assertion Markup Language (SAML 2.0)
-  - OpenID Connect (OIDC)
-  - Open Authentication (OAuth 2.0)
+  - Security Assertion Markup Language (**SAML 2.0**)
+  - **OpenID Connect (OIDC**)
+  - **Open Authentication (OAuth 2.0)**
 
 **Federated Directory Service**: Link entire directories of users and groups, including optional extra levels of authentication.
 
@@ -60,13 +60,13 @@ Use **boundaries** to properly monitor this use case.
 - Can be connected to Microsoft Active Directory.
 
 ### User Accounts
-- When creating a user, a CSV is generated with their unique login link.
-- Can only create an access key for a user after creating the user id.
+- When creating a **user**, a **CSV** is generated with their **unique login link**.
+- Can only create an **access key** for a user **after** creating the user id.
 
 **Password Policies**:
 
 **Default Password Policy**: Min 8, max 128 characters
-  - 3 of 4 character types (upper, lower, number, special)
+  - **3** of **4** character types (upper, lower, number, special)
   - Can't be the same as the account name or email.
 
 **Best Practice**:
@@ -75,18 +75,18 @@ Use **boundaries** to properly monitor this use case.
 - Avoid easily guessed passwords.
 
 ### Credential Rotation
-- Require periodic password changes limits the time for a password cracking attack.
+- Require **periodic password changes** limits the time for a password cracking attack.
 - Reminds users of an organizations' emphasis on security.
 
 ### Principle of Least Privilege
-- Grant only the access needed.
+- Grant **only the access needed**.
 - Granting more access creates vulnerabilities.
 - Opens the doors for attackers.
 - It's achieved through permission management.
 - Policy summaries can be used to see the cumulative permissions a user has.
 
 ### IAM Roles
-- Never make a role an administrator.
+- **Never make a role an administrator**.
 
 ### Policy Conditions
 - Determines when a policy applies.

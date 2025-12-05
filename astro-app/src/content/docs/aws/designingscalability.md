@@ -29,7 +29,7 @@ description: Overview of ways to design elastic/scalable solutions in AWS.
 **Use stacks on-prem, chef and puppet are cloud-only.
 
 ### Cognito
-- User identity and synchronization service (SSO).
+- **User identity and synchronization service (SSO)**.
 - Public identity providers are leveraged (Google, Facebook, Amazon).
 - Private identity providers can be leveraged (Active Directory with SAML).
 - Based on Open Standards (OAuth 2.0, SAML 2.0, OpenID connect)
@@ -44,16 +44,16 @@ description: Overview of ways to design elastic/scalable solutions in AWS.
 - User defines the number of needed clusters.
 
 ### EMR Cluster Nodes
-- Master
+- **Master**
     - Coordinates job distribution across core and task nodes.
-- Core
+- **Core**
     - Runs tasks assigned by the master node.
     - Stores data in the cluster.
-- Task
+- **Task**
     - Runs only tasks that do not store data.
 
 ### CloudFormation
-- Rapid deployment of full, multi-instanced solutions.
+- **Rapid deployment of full, multi-instanced solutions**.
 - Mirror existing internal architectures.
 - Take advantages of templates created by others.
 - Can effectively take a snapshot of your deployment/current AWS services and load it into a template (CloudFormer).
@@ -65,10 +65,10 @@ description: Overview of ways to design elastic/scalable solutions in AWS.
 - Monitors the cloud and on-prem systems.
 - Can build dashboard (ie security, cost, ect...)
 - Built from logs & events.
-- Events can trigger alarms.
+- **Events can trigger alarms**.
 
 ### Trusted Advisor
-- Service that evaluates your environment and can recommend improvements.
+- Service that **evaluates** your **environment** and can **recommend improvements**.
 - Security improvements included in free tier.
 - With payment, get cost & performance improvement. 
 

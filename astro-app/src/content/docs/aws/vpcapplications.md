@@ -31,19 +31,19 @@ There is a **default VPC**, Amazon does **not** recommend **deleting** it.
 **DHCP**: Specifies the range of addresses to assign to devices on the network,
 - **Option**: Config for IP protocol on the client that receives the connection.
 
-**Elastic Ip  Addresses (EIP)**
+### Elastic Ip  Addresses (EIP)
 - **Public** IP addresses from the VPC region.
 - **Permanently allocated** to your account until **released**.
 - Account is **charged* until release.
 - **Network interfaces** consume EIPs
 - EIPs can only be moved between instances in the **same region**.
 
-**Elastic Network Interface (ENI)**:
+### Elastic Network Interface (ENI):
 - Virtual network interface attached to an instance.
 - **Only available** within a VPC.
 - Allows **dual-homing** (1 connection to the **internet**, 1 to the **private network**)
 
-**Endpoints**:
+### Endpoints:
 - Connect VPCs to AWS Services
 - Can enforce policies on different endpoints
 
