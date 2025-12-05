@@ -6,7 +6,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Full-Stack Knowledge Base',
+			title: 'Get Smart!',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/justinklein2001/my-tech-notes' }],
 			sidebar: [
 				{
