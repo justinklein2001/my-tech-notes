@@ -5,23 +5,14 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 
-// ---------------------------------------------------------
-// Use 'createRequire' to load older libraries safely
-// ---------------------------------------------------------
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const pdfLib = require("pdf-parse");
-// If it's wrapped in an object, extract the function. Otherwise use it directly.
-const pdf = typeof pdfLib === 'function' ? pdfLib : pdfLib.default;
-// ---------------------------------------------------------
-
 // --- CONFIG ---
 const REGION = "us-east-1";
 const DB_OUTPUT_DIR = "lancedb";
 
+// PATHS
 const CONTENT_DIR = "src/content"; 
 const LEETCODE_FILE = "raw/private/leetcode.json";
-const RESUME_FILE = "raw/private/resume.pdf";
+const RESUME_FILE = "raw/private/resume.txt";
 
 const bedrock = new BedrockRuntimeClient({ region: REGION });
 
@@ -41,7 +32,7 @@ async function getEmbedding(text) {
 }
 
 async function main() {
-  console.log("🚀 Starting Vectorization (Stable)...");
+  console.log("🚀 Starting Vectorization (Text Mode)...");
 
   if (fs.existsSync(DB_OUTPUT_DIR)) fs.rmSync(DB_OUTPUT_DIR, { recursive: true, force: true });
   fs.mkdirSync(DB_OUTPUT_DIR);
@@ -49,7 +40,7 @@ async function main() {
   const db = await lancedb.connect(DB_OUTPUT_DIR);
   const rows = [];
 
-  // A. MARKDOWN
+  // A. MARKDOWN NOTES
   const files = await glob(`${CONTENT_DIR}/**/*.{md,mdx}`);
   console.log(`📂 Found ${files.length} notes.`);
   for (const file of files) {
@@ -83,22 +74,24 @@ async function main() {
     }
   }
 
-  // C. RESUME (Using pdf-parse via require)
+  // C. RESUME (Simple Text Read)
   if (fs.existsSync(RESUME_FILE)) {
-    console.log("📄 Parsing Resume...");
+    console.log("📄 Reading Resume...");
     
-    const pdfBuffer = fs.readFileSync(RESUME_FILE);
-    const data = await pdf(pdfBuffer); // Simple, reliable usage
-    const cleanText = data.text.trim();
+    // NATIVE NODE READ - No libraries, no errors
+    const resumeText = fs.readFileSync(RESUME_FILE, "utf-8").trim();
 
-    const vector = await getEmbedding(cleanText);
-    rows.push({
-      id: "resume-full",
-      vector,
-      text: cleanText,
-      category: "resume",
-      metadata: JSON.stringify({ type: "pdf", source: "Local" })
-    });
+    if (resumeText) {
+      const vector = await getEmbedding(resumeText);
+      rows.push({
+        id: "resume-full",
+        vector,
+        text: resumeText,
+        category: "resume",
+        metadata: JSON.stringify({ type: "txt", source: "Local" })
+      });
+      console.log("✅ Resume vectorized.");
+    }
   } else {
     console.warn(`⚠️ File not found: ${RESUME_FILE}`);
   }

@@ -1,0 +1,49 @@
+Summary  
+Software Developer with a Bachelor of Computing and 2.5+ years of production experience across companies such as Adknown, Tulip, 
+and NCR. I have successfully shipped full-stack features using React, PHP, and SQL, consistently delivering optimized code in agile 
+environments. My background includes reducing transaction costs by 20% through efficient backend logic and maintaining legacy 
+codebases and currently performing technical audits on AI-generated code, focusing on logic validation and root-cause analysis.  
+Technical Skills  
+Languages: TypeScript, JavaScript, Python, Java, PHP, SQL (MySQL, Postgres) 
+Frontend: React, Next.js, Tailwind, MaterialUI, Bootstrap 
+Backend: Node.js, Express, Spring 
+Cloud: AWS (S3, EC2, Cloudfront, Route 53, IAM) 
+DevOps: Docker, Terraform, GitHub Actions, CI/CD 
+Project Management: Git, Jira, Bitbucket, GitLab, GitHub  
+Methodologies: Agile, Scrum, Clean Code, Clean Architecture, Least Privilege, Well-Architected Framework 
+OS: Linux (Ubuntu, Debian), Windows, WSL, MacOS  
+Experience    
+Software Developer | Contract |Data Annotation (Remote, ON)                                                                                           Apr 2024 - Present 
+-Leveraged Cline agentic IDE integrations to iteratively develop full-stack (React/Typescript/Postgres) applications supporting AI model 
+evaluation workflows. 
+-Containerized multi-service stacks with Docker, optimizing model-test execution pipelines. 
+-Analyzed and improved LLM code-generation reliability through Reinforcement Learning from Human Feedback (RLHF).  
+Software Developer | Co-op | Adknown (Guelph, ON)                                                                                                           Jan 2023 - Aug 2023 
+-Delivered production features across a React, PHP, MySQL, AWS and Docker stack. 
+-Dockerized two ad-tracking pixels, lowering environment setup time by 40%. 
+-Architected a Bing campaign linkage tool, improving marketers' CPC performance.  
+Software Developer | Co-op | Tulip Retail (Kitchener, ON)                                                                                                  May 2022 - Aug 2022 
+-Delivered features on the LiveConnect & Appointments platform (PHP, React, Docker). 
+-Contributed to the Tulip Appointments NPM package used by clients such as Chanel and Michael Kors. 
+-Integrated the appointments widget into the core Clienteling product, improving high-value customer booking flows.  
+Software Developer | Co-op | NCR Corporation (Guelph, ON)                                                                                             Sep 2021 - Dec 2021 
+-Worked on the API Toolkit (Draft) team using Jenkins, Docker, React, OpenAPI and Spring. 
+-Collaborated in an agile environment, completing JIRA sprint work with high delivery velocity.  
+Web Developer | Co-op | Heart & Stroke (Toronto, ON)                                                                                                      May 2021 - Aug 2021 
+-Built a standalone React/Node/MySQL direct-mail donation platform. 
+-Integrated Stripe and Moneris SDKs, improving PCI compliance and reducing transaction fees by 20%.  
+Personal Project  
+AWS/Terraform Managed Mult-Site Deployment 
+-Leveraged one centralized Terraform repository to deploy 2 distinct static/serverless sites to AWS, all concatenated under one root domain, 
+and automated deployments via GitHub Actions CI/CD. 
+justinklein.ca: Next.js/TypeScript portfolio site. 
+get-smart.justinklein.ca: Astro static site for technical notes.  
+Education  
+Bachelor of Computing, Software Engineering (Co-op) — University of Guelph | Minor in Business | Graduated Jun 2024 
+Capstone Project: Full-Stack Web Games Repository 
+-Collaborated on a team of 6 developers across 9 sprints to iteratively develop a React/Three.js/PHP/Docker full-stack application that 
+hosted a suite of farm-related 2D and 3D web games. 
+-Led the dockerization of the application, ensuring 100% compatibility across multiple OS devices (Linux, Windows, WSL and MacOS) for all 
+developers’ local development. 
+-Spearheaded principal React development for both the platformer and 3D game, ensuring that Three.js has principal DOM rendering 
+control over React for each game's core animation loop. 
