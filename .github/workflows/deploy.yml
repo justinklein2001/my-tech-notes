@@ -1,11 +1,11 @@
-name: Deploy to AWS S3
+name: Deploy Astro App
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'astro-app/**' # Only trigger if files in the astro-app folder change
+      - 'astro-app/**'
       - '.github/workflows/deploy.yml'
 
 permissions:
@@ -14,9 +14,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Build & Deploy
     runs-on: ubuntu-latest
-    
     defaults:
       run:
         working-directory: ./astro-app
@@ -25,12 +23,24 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      # ---------------------------------------------------------
+      # This checks if specific files changed in this push
+      # ---------------------------------------------------------
+      - name: Check for Vector Changes
+        uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            vectors:
+              - 'astro-app/raw/private/**'
+              - 'astro-app/scripts/**'
+              - 'astro-app/content/docs/**'
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
           cache: 'npm'
-          # Tell the cache action where the lockfile actually lives
           cache-dependency-path: ./astro-app/package-lock.json
 
       - name: Install Dependencies
@@ -38,22 +48,45 @@ jobs:
 
       - name: Build Static Site
         run: npm run build
-        # This generates 'portfolio/out'
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: us-east-1
-          
-      - name: Deploy to S3
+
+      # ---------------------------------------------------------
+      # 1. GENERATE VECTORS (Conditional)
+      # ---------------------------------------------------------
+      - name: Generate Knowledge Base
+        # Only run if the 'vectors' filter matched above
+        if: steps.changes.outputs.vectors == 'true'
+        run: node scripts/vectorize.mjs
+        env:
+          AWS_REGION: us-east-1
+          KB_BUCKET_NAME: ${{ secrets.KB_BUCKET_NAME }}
+
+      # ---------------------------------------------------------
+      # 2. SYNC VECTORS TO S3 (Conditional)
+      # ---------------------------------------------------------
+      - name: Upload Knowledge Base
+        # Only run if vectors were actually generated
+        if: steps.changes.outputs.vectors == 'true'
+        run: |
+          aws s3 sync ./lancedb s3://${{ secrets.KB_BUCKET_NAME }}/lancedb \
+            --delete \
+            --no-progress
+
+      # ---------------------------------------------------------
+      # 3. DEPLOY WEBSITE (Always Runs)
+      # ---------------------------------------------------------
+      - name: Deploy Site Assets
         run: |
           aws s3 sync ./dist s3://${{ vars.S3_BUCKET_NAME }} \
             --delete \
             --cache-control "public, max-age=31536000, immutable" \
             --exclude "*.html" \
             --exclude "sitemap-*.xml"
-
 
           aws s3 sync ./dist s3://${{ vars.S3_BUCKET_NAME }} \
             --delete \
