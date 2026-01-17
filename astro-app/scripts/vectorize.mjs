@@ -1,5 +1,5 @@
 import { BedrockRuntimeClient, InvokeModelCommand } from "@aws-sdk/client-bedrock-runtime";
-import * as lancedb from "vectordb";
+import * as lancedb from "@lancedb/lancedb";
 import { glob } from "glob";
 import fs from "fs";
 import matter from "gray-matter";
