@@ -4,7 +4,14 @@ import { glob } from "glob";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import { extractText } from "unpdf"; 
+
+// ---------------------------------------------------------
+// Use 'createRequire' to load older libraries safely
+// ---------------------------------------------------------
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const pdf = require("pdf-parse"); 
+// ---------------------------------------------------------
 
 // --- CONFIG ---
 const REGION = "us-east-1";
@@ -32,7 +39,7 @@ async function getEmbedding(text) {
 }
 
 async function main() {
-  console.log("🚀 Starting Vectorization (Modern)...");
+  console.log("🚀 Starting Vectorization (Stable)...");
 
   if (fs.existsSync(DB_OUTPUT_DIR)) fs.rmSync(DB_OUTPUT_DIR, { recursive: true, force: true });
   fs.mkdirSync(DB_OUTPUT_DIR);
@@ -74,18 +81,13 @@ async function main() {
     }
   }
 
-  // C. RESUME (Using unpdf)
+  // C. RESUME (Using pdf-parse via require)
   if (fs.existsSync(RESUME_FILE)) {
     console.log("📄 Parsing Resume...");
     
-    // Read file as a buffer
     const pdfBuffer = fs.readFileSync(RESUME_FILE);
-    
-    // ✅ Extract text cleanly
-    const { text } = await extractText(pdfBuffer);
-    
-    // Normalize whitespace (removes weird PDF line breaks)
-    const cleanText = text.replace(/\s+/g, " ").trim();
+    const data = await pdf(pdfBuffer); // Simple, reliable usage
+    const cleanText = data.text.trim();
 
     const vector = await getEmbedding(cleanText);
     rows.push({
