@@ -10,7 +10,9 @@ import path from "path";
 // ---------------------------------------------------------
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-const pdf = require("pdf-parse"); 
+const pdfLib = require("pdf-parse");
+// If it's wrapped in an object, extract the function. Otherwise use it directly.
+const pdf = typeof pdfLib === 'function' ? pdfLib : pdfLib.default;
 // ---------------------------------------------------------
 
 // --- CONFIG ---
