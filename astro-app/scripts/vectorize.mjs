@@ -4,7 +4,7 @@ import { glob } from "glob";
 import fs from "fs";
 import matter from "gray-matter";
 import { pdf } from "pdf-parse";
-import { path }  from "path";
+import path from "path";
 
 // --- CONFIG ---
 const REGION = "us-east-1";
