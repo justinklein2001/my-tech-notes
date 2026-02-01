@@ -1,22 +1,12 @@
 ---
-title: Get Smart!
+title: ""
 description: Technical notes on all things software development, cloud computing, and security.
-hero:
-  tagline: An ever-growing collection of technical notes on software development, cloud computing, and security. Authored by Justin Klein.
-  image:
-    file: ../../../public/favicon.svg
-
+tableOfContents: false
+head:
+  - tag: title
+    content: Justin Klein | Get Smart!
 ---
 
-import { Card } from '@astrojs/starlight/components';
+import HomeHero from '../../components/HomeHero.astro';
 
-### What is this site?
-<Card title="It's technical notes in my own words." variant="info" class="mb-6">
-  A novel concept, right? The goal is to have a site I can refer back to when I need a refresher on a topic.
-</Card>
-<Card title="It's a step on the path towards mastery." variant="info" class="mb-6">
-  I learn best when I watch an expert explain a topic, translate it into my own words, and then build something leveraging that knowledge. This site is the second step in that process.
-</Card>
-<Card title="It's the knowledge base for a RAG study agent." variant="info" class="mb-6">
-   Sometimes I forget things. By having my notes in a structured format, I can build a Retrieval-Augmented Generation (RAG) study agent that can help me review and retain information more effectively.
-</Card>
+<HomeHero />

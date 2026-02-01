@@ -1,0 +1,70 @@
+/* Import specific weights since variable font is not available in these versions */
+@import "tailwindcss";
+@import '@fontsource/geist-sans/400.css';
+@import '@fontsource/geist-sans/600.css';
+@import '@fontsource/geist-sans/700.css';
+@import '@fontsource/geist-mono/400.css';
+@import '@fontsource/geist-mono/600.css';
+
+:root {
+  /* Fonts */
+  --sl-font-family: 'Geist Sans', system-ui, sans-serif;
+  --sl-font-mono: 'Geist Mono', monospace;
+  
+  /* Base Colors (Dark Mode Default) */
+  --sl-color-bg: #0a0a0a;
+  --sl-color-bg-nav: #0a0a0a; /* Reset to match body so outer containers don't clash */
+  --sl-color-bg-sidebar: #0a0a0a;
+  --sl-color-bg-footer: #0a0a0a;
+
+  /* Borders */
+  --sl-color-hairline-light: #1f2937;
+  --sl-color-hairline: #1f2937;
+  
+  /* Text */
+  --sl-color-text: #f9fafb;
+  --sl-color-text-invert: #0a0a0a;
+  
+  /* Accents */
+  --sl-color-accent-low: #1f2937;
+  --sl-color-accent: #f9fafb;
+  --sl-color-accent-high: #ffffff;
+  
+  /* Grays Palette */
+  --sl-color-gray-1: #f9fafb;
+  --sl-color-gray-2: #e5e7eb;
+  --sl-color-gray-3: #d1d5db;
+  --sl-color-gray-4: #9ca3af;
+  --sl-color-gray-5: #6b7280;
+  --sl-color-gray-6: #1f2937;
+}
+
+/* Starlight Navbar Override */
+.header {
+  background-color: rgba(17, 24, 39, 0.9) !important; /* #111827 with opacity */
+  backdrop-filter: blur(8px);
+  width: 100%;
+}
+
+/* Ensure body background is consistent and fonts are smoothed */
+body {
+  background-color: var(--sl-color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a; 
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151; 
+}

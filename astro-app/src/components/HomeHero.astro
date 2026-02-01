@@ -1,0 +1,84 @@
+<section class="flex flex-col items-center justify-center px-4 text-center py-20">
+  <div class="max-w-3xl space-y-6 mx-auto">
+    <h1 class="text-5xl font-bold tracking-tight sm:text-7xl">
+      Get Smart!
+    </h1>
+    <h2 class="text-3xl tracking-tight sm:text-5xl">
+      Technical notes on all things software development.
+    </h2>
+    <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+      Authored by Justin Klein.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+      <a href="/aws/overview">
+        <button class="h-12 px-8 text-lg font-medium bg-white text-black hover:bg-white/90 rounded-md transition-colors cursor-pointer">
+          Start Reading
+        </button>
+      </a>
+      <a href="https://justinklein.ca" target="_blank">
+         <button class="h-12 px-8 text-lg font-medium bg-gray-800 text-white hover:bg-gray-700 rounded-md transition-colors cursor-pointer">
+          View Portfolio
+        </button>
+      </a>
+      <a href="https://github.com/justinklein2001/my-tech-notes" target="_blank">
+         <button class="h-12 px-8 text-lg font-medium border border-gray-700 text-white hover:bg-gray-800 rounded-md transition-colors cursor-pointer">
+          View Source Code
+        </button>
+      </a>
+    </div>
+  </div>
+    <h2 class="text-3xl tracking-tight sm:text-5xl bg-linear-to-r from-white to-gray-500 bg-clip-text text-transparent pb-2">
+      What's this site about?
+    </h2>
+  <!-- Tech Stack / Features Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl w-full text-left items-start">
+    <div class="mt-0! bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition-colors h-full flex flex-col">
+      <div class="mb-4 flex flex-col items-start">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400 mb-2 block"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <h3 class="text-lg font-semibold text-white min-h-[3.5rem] flex items-center">Keeping Logs In My Own Words</h3>
+      </div>
+      <p class="text-gray-400 text-sm flex-1">
+        Writing down concepts in my own words and building projects applying those concepts results in better retention and understanding.
+      </p>
+    </div>
+
+    <div class="mt-0! bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-orange-500/50 transition-colors h-full flex flex-col">
+      <div class="mb-4 flex flex-col items-start">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-400 mb-2 block"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        <h3 class="text-lg font-semibold text-white min-h-[3.5rem] flex items-center">Software + People Skills</h3>
+      </div>
+      <p class="text-gray-400 text-sm flex-1">
+        Being technically proficient is only half the battle; strong communication and interpersonal skills are essential for career growth.
+      </p>
+    </div>
+
+    <div class="mt-0! bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-green-500/50 transition-colors h-full flex flex-col">
+       <div class="mb-4 flex flex-col items-start">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400 mb-2 block"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+        <h3 class="text-lg font-semibold text-white min-h-[3.5rem] flex items-center">RAG Knowledge Base</h3>
+      </div>
+      <p class="text-gray-400 text-sm flex-1">
+        All notes are vectored and ingested by <span class="font-semibold text-white">Get Quizzed!</span> to mock senior technical interviews tailored to my resume and experience. 
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+    /* Hide Starlight's default page header content on the homepage */
+    :global(.content-panel) {
+        border-top: none !important;
+    }
+    :global(.content-panel .sl-container) {
+        margin-top: 0 !important;
+        border-top: none !important;
+    }
+    :global(.main-pane) {
+        border-top: none !important;
+    }
+    /* Hide the mobile TOC or other dividers if present */
+    :global(hr) {
+        display: none !important;
+    }
+</style>
