@@ -11,6 +11,15 @@ export default defineConfig({
           title: 'Get Smart!',
           favicon: '/favicon.ico',
           customCss: ['./src/styles/custom.css'],
+          expressiveCode: {
+            themes: ['starlight-dark'],
+          },
+          head: [
+            {
+              tag: 'script',
+              content: "document.documentElement.setAttribute('data-theme', 'dark'); if (typeof localStorage !== 'undefined') { localStorage.setItem('starlight-theme', 'dark'); }",
+            },
+          ],
           components: {
               SiteTitle: './src/components/SiteTitle.astro',
               SocialIcons: './src/components/SocialIcons.astro',
