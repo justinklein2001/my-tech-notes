@@ -6,7 +6,12 @@
 @import '@fontsource/geist-mono/400.css';
 @import '@fontsource/geist-mono/600.css';
 
-:root {
+:root,
+[data-theme='light'],
+[data-theme='dark'] {
+  /* Force Dark Mode Scheme */
+  color-scheme: dark;
+
   /* Fonts */
   --sl-font-family: 'Geist Sans', system-ui, sans-serif;
   --sl-font-mono: 'Geist Mono', monospace;
@@ -22,6 +27,7 @@
   --sl-color-hairline: #1f2937;
   
   /* Text */
+  --sl-color-white: #ffffff; /* Explicitly ensure white is white */
   --sl-color-text: #f9fafb;
   --sl-color-text-invert: #0a0a0a;
   
