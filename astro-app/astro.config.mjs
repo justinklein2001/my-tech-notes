@@ -26,6 +26,25 @@ export default defineConfig({
               ThemeSelect: './src/components/HiddenThemeSelect.astro',
           },
           sidebar: [
+            {
+                  label: 'Languages',
+                  items: [
+                      {
+                          label: 'C++',
+                          collapsed: true,
+                          items: [
+                              { label: 'Overview', slug: 'cpp/overview' },
+                              { label: '2.1 Local Variables & Function Arguments', slug: 'cpp/localvariables' },
+                              { label: '2.2 Reference & Value Semantics', slug: 'cpp/referencesemantics' },
+                              { label: '2.3 Declaration & Initialization', slug: 'cpp/initialization' },
+                              { label: '2.4 Classes', slug: 'cpp/classes' },
+                              { label: '2.5 Special Member Functions', slug: 'cpp/specialmember' },
+                              { label: '2.6 Pointers & Memory', slug: 'cpp/pointers' },
+                              { label: '2.7 Array, String & Vector', slug: 'cpp/arraystringvector' }
+                          ],
+                      }
+                  ],
+              },
               {
                   label: 'Cloud Computing',
                   items: [
@@ -77,7 +96,7 @@ export default defineConfig({
                   ],
               },
               {
-                  label: 'Frontend',
+                  label: 'Frontend Frameworks',
                   items: [
                       {
                           label: 'tailwindCSS',
